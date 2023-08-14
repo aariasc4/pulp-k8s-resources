@@ -98,6 +98,9 @@ spec:
             - ALL
       imagePullSecrets:
       - name: redhat-operators-pull-secret
+      nodeSelector:
+        kubernetes.io/os: linux
+        kubernetes.io/arch: amd64
       securityContext:
         runAsNonRoot: true
       serviceAccountName: pulp-operator-controller-manager
